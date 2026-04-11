@@ -97,6 +97,53 @@
           Mark as complete
         </label>
       </div>
+
+      <!-- Tags -->
+      <div data-testid="test-todo-tags" class="flex flex-wrap gap-2 mb-10">
+        <span
+          data-testid="test-todo-tag-work"
+          class="tag px-4 py-1.5 bg-white/10 text-white text-xs font-medium rounded-3xl border border-white/20 flex items-center"
+        >
+          💼 work
+        </span>
+        <span
+          data-testid="test-todo-tag-urgent"
+          class="tag px-4 py-1.5 bg-white/10 text-white text-xs font-medium rounded-3xl border border-white/20 flex items-center"
+        >
+          🚨 urgent
+        </span>
+        <span
+          class="tag px-4 py-1.5 bg-white/10 text-white text-xs font-medium rounded-3xl border border-white/20 flex items-center"
+        >
+          🎨 design
+        </span>
+        <span
+          class="tag px-4 py-1.5 bg-white/10 text-white text-xs font-medium rounded-3xl border border-white/20 flex items-center"
+        >
+          ⚡ frontend
+        </span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center justify-end gap-x-3">
+        <button
+          data-testid="test-todo-edit-button"
+          id="edit-btn"
+          aria-label="Edit this todo"
+          class="flex items-center gap-x-2 px-6 py-3 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-medium text-sm transition-all active:scale-95"
+        >
+          ✏️ Edit
+        </button>
+
+        <button
+          data-testid="test-todo-delete-button"
+          id="delete-btn"
+          aria-label="Delete this todo"
+          class="flex items-center gap-x-2 px-6 py-3 rounded-2xl bg-red-500/10 hover:bg-red-500/20 text-red-400 font-medium text-sm transition-all active:scale-95"
+        >
+          🗑️ Delete
+        </button>
+      </div>
     </article>
   </body>
 </html>
