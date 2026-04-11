@@ -30,6 +30,7 @@
         <!-- Status -->
         <div
           data-testid="test-todo-status"
+          id="status-badge"
           class="px-5 py-2 rounded-3xl text-sm font-medium flex items-center gap-2 bg-amber-500/20 text-amber-300 border border-amber-400/30"
         >
           <div class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
@@ -40,6 +41,7 @@
       <!-- Title -->
       <h2
         data-testid="test-todo-title"
+        id="todo-title"
         class="text-3xl font-semibold leading-tight mb-3"
       >
         Build Testable Todo Item Card
@@ -54,6 +56,47 @@
         data-testid attributes, perfect responsiveness, keyboard navigation, and
         live time-remaining updates.
       </p>
+
+      <!-- Due Date & Time Remaining -->
+      <div class="flex flex-wrap items-baseline gap-x-6 mb-8 text-sm">
+        <div class="flex items-center gap-x-2">
+          <span class="text-zinc-400">📅</span>
+          <time
+            data-testid="test-todo-due-date"
+            datetime="2026-04-25"
+            class="font-medium text-zinc-200"
+          >
+            Due Apr 25, 2026
+          </time>
+        </div>
+
+        <div class="flex items-center gap-x-2">
+          <span class="text-zinc-400">⏳</span>
+          <span
+            data-testid="test-todo-time-remaining"
+            id="time-remaining"
+            class="font-medium text-emerald-400"
+          >
+            Loading...
+          </span>
+        </div>
+      </div>
+
+      <!-- Checkbox -->
+      <div class="flex items-center gap-x-3 mb-8">
+        <input
+          type="checkbox"
+          id="complete-toggle"
+          data-testid="test-todo-complete-toggle"
+          class="w-6 h-6 accent-blue-500 bg-white/10 border-2 border-white/30 rounded-xl cursor-pointer"
+        />
+        <label
+          for="complete-toggle"
+          class="font-medium text-zinc-200 cursor-pointer flex-1 select-none"
+        >
+          Mark as complete
+        </label>
+      </div>
     </article>
   </body>
 </html>
