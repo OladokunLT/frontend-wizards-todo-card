@@ -17,10 +17,42 @@
       data-testid="test-todo-card"
       class="todo-card w-full max-w-md bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl p-8 text-white"
     >
-      <!-- I will fill this card in the next phases -->
-      <h1 class="text-center text-2xl font-bold mb-8">Todo Card - Phase 2</h1>
-      <p class="text-center text-zinc-400">
-        data-testid="test-todo-card" is ready
+      <!-- Priority + Status Row -->
+      <div class="flex items-center justify-between mb-6">
+        <!-- Priority Badge -->
+        <div
+          data-testid="test-todo-priority"
+          class="px-5 py-2 rounded-3xl text-sm font-semibold flex items-center gap-2 bg-red-500/90 text-white"
+        >
+          🔥 High
+        </div>
+
+        <!-- Status -->
+        <div
+          data-testid="test-todo-status"
+          class="px-5 py-2 rounded-3xl text-sm font-medium flex items-center gap-2 bg-amber-500/20 text-amber-300 border border-amber-400/30"
+        >
+          <div class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
+          In Progress
+        </div>
+      </div>
+
+      <!-- Title -->
+      <h2
+        data-testid="test-todo-title"
+        class="text-3xl font-semibold leading-tight mb-3"
+      >
+        Build Testable Todo Item Card
+      </h2>
+
+      <!-- Description -->
+      <p
+        data-testid="test-todo-description"
+        class="text-zinc-300 text-[15px] leading-relaxed mb-8"
+      >
+        Create a clean, modern, fully accessible Todo card with all required
+        data-testid attributes, perfect responsiveness, keyboard navigation, and
+        live time-remaining updates.
       </p>
     </article>
   </body>
