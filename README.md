@@ -19,7 +19,7 @@ A clean, modern, fully accessible and testable Todo Card component built as part
 - Keyboard navigable (Tab, Space, Enter)
 - WCAG AA compliant contrast and visible focus styles
 - Semantic HTML (`<article>`, `<time>`, `<label>`, etc.)
-- Modern glassmorphic UI with Tailwind CSS
+- Modern glassmorphic UI with Traditional CSS
 
 ## 🧪 Testability
 
@@ -44,7 +44,7 @@ All required data-testid values are present:
 ## 🛠️ Technologies Used
 
 - HTML5 (Semantic)
-- Tailwind CSS (via CDN)
+- Tradition CSS
 - Vanilla JavaScript
 - Responsive design with mobile-first approach
 
