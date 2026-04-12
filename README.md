@@ -2,7 +2,12 @@
 
 A clean, modern, fully accessible and testable Todo Card component built as part of the Frontend Wizards Stage 0 task.
 
-![Frontend Wizards Todo Card Screenshot](https://www.awesomescreenshot.com/image/59762618?key=1c6dac553e38017673b94955c6a11d3d)
+<p align="center">
+  <img src="./Testable_Todo_Card_item.png" 
+       alt="Frontend Wizards Stage 0 - Testable Todo Card" 
+       width="800" 
+       style="border-radius: 12px; border: 1px solid #374151;">
+</p>
 
 ## ✅ Features Implemented
 
