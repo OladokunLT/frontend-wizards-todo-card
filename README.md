@@ -2,7 +2,7 @@
 
 A clean, modern, fully accessible and testable Todo Card component built as part of the Frontend Wizards Stage 0 task.
 
-![Todo Card Preview](https://via.placeholder.com/600x400/1f2937/ffffff?text=Todo+Card+Preview)
+![Todo Card Preview]("https://www.awesomescreenshot.com/image/59762618?key=1c6dac553e38017673b94955c6a11d3d")
 
 ## ✅ Features Implemented
 
@@ -34,8 +34,7 @@ All required data-testid values are present:
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-vercel-link-here.vercel.app)  
-_(Replace this with your actual deployed URL after deployment)_
+[View Live Demo](https://frontend-wizards-todo-card.vercel.app/)
 
 ## 🛠️ Technologies Used
 
@@ -88,13 +87,13 @@ frontend-wizards-todo-card/
 
 ## Submission Details
 
-Task: Frontend Wizards Stage 0
+- **Task:** Frontend Wizards Stage 0
 
-Deadline: April 16, 2026
+- **Deadline:** April 16, 2026
 
-Live URL: [Add your Vercel/Netlify link here]
+- **Live URL:** https://frontend-wizards-todo-card.vercel.app/
 
-GitHub Repo: https://github.com/OladokunLT/frontend-wizards-todo-card
+- **GitHub Repo:** https://github.com/OladokunLT/frontend-wizards-todo-card
 
 ---
 
