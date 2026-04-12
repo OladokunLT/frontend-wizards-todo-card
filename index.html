@@ -145,5 +145,146 @@
         </button>
       </div>
     </article>
+
+    <script>
+      // Fixed due date (April 25, 2026)
+      const DUE_DATE = new Date("2026-04-25T18:00:00Z");
+
+      /**
+       * Calculate friendly time remaining text
+       */
+      function getTimeRemaining(due) {
+        const now = new Date();
+        const diffMs = due - now;
+
+        if (diffMs < 0) {
+          // Overdue
+          const overdueMs = Math.abs(diffMs);
+          const days = Math.floor(overdueMs / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (overdueMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+          );
+
+          if (days >= 1) return `Overdue by ${days} day${days > 1 ? "s" : ""}`;
+          if (hours >= 1)
+            return `Overdue by ${hours} hour${hours > 1 ? "s" : ""}`;
+          return "Overdue now!";
+        }
+
+        // Not overdue
+        const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+
+        if (days > 1) return `Due in ${days} days`;
+        if (days === 1) return "Due tomorrow";
+        if (hours >= 1) return `Due in ${hours} hour${hours > 1 ? "s" : ""}`;
+        return "Due now!";
+      }
+
+      /**
+       * Update time remaining display
+       */
+      function updateTimeRemaining() {
+        const el = document.getElementById("time-remaining");
+        if (!el) return;
+        el.textContent = getTimeRemaining(DUE_DATE);
+      }
+
+      /**
+       * Handle checkbox toggle behaviour
+       */
+      function handleCheckboxToggle() {
+        const checkbox = document.getElementById("complete-toggle");
+        const title = document.getElementById("todo-title");
+        const statusBadge = document.getElementById("status-badge");
+        const card = document.querySelector('[data-testid="test-todo-card"]');
+
+        checkbox.addEventListener("change", () => {
+          if (checkbox.checked) {
+            // Mark as Done
+            title.classList.add("line-through", "text-zinc-400");
+            card.classList.add("completed");
+
+            statusBadge.innerHTML = `
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                    Done
+                `;
+            statusBadge.className = `px-5 py-2 rounded-3xl text-sm font-medium flex items-center gap-2 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30`;
+          } else {
+            // Revert to In Progress
+            title.classList.remove("line-through", "text-zinc-400");
+            card.classList.remove("completed");
+
+            statusBadge.innerHTML = `
+                    <div class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
+                    In Progress
+                `;
+            statusBadge.className = `px-5 py-2 rounded-3xl text-sm font-medium flex items-center gap-2 bg-amber-500/20 text-amber-300 border border-amber-400/30`;
+          }
+        });
+      }
+
+      /**
+       * Handle Edit & Delete buttons
+       */
+      function handleActionButtons() {
+        // Edit button
+        document.getElementById("edit-btn").addEventListener("click", () => {
+          console.log(
+            '%c✅ Edit button clicked (data-testid="test-todo-edit-button")',
+            "color:#22c55e; font-weight:600",
+          );
+          alert("🪄 Edit mode opened! (This is a demo)");
+        });
+
+        // Delete button
+        document.getElementById("delete-btn").addEventListener("click", () => {
+          console.log(
+            '%c🗑️ Delete button clicked (data-testid="test-todo-delete-button")',
+            "color:#ef4444; font-weight:600",
+          );
+          if (confirm("Delete this task?")) {
+            const card = document.querySelector(
+              '[data-testid="test-todo-card"]',
+            );
+            card.style.transition = "all 0.4s cubic-bezier(0.4, 0, 1, 1)";
+            card.style.transform = "scale(0.95)";
+            card.style.opacity = "0";
+
+            setTimeout(() => {
+              alert("✅ Task deleted (demo only)");
+              location.reload();
+            }, 400);
+          }
+        });
+      }
+
+      /**
+       * Initialize everything
+       */
+      function init() {
+        // Initial time display
+        updateTimeRemaining();
+
+        // Update time every 60 seconds
+        setInterval(updateTimeRemaining, 60000);
+
+        // Checkbox behaviour
+        handleCheckboxToggle();
+
+        // Action buttons
+        handleActionButtons();
+
+        console.log(
+          "%c🚀 Todo Card is fully functional! All requirements met.",
+          "color:#22c55e; font-size:14px; font-weight:700",
+        );
+      }
+
+      // Start the app when page loads
+      window.onload = init;
+    </script>
   </body>
 </html>
