@@ -2,7 +2,7 @@
 
 A clean, modern, fully accessible and testable Todo Card component built as part of the Frontend Wizards Stage 0 task.
 
-![Todo Card Preview]("https://www.awesomescreenshot.com/image/59762618?key=1c6dac553e38017673b94955c6a11d3d")
+![Frontend Wizards Todo Card Screenshot](https://www.awesomescreenshot.com/image/59762618?key=1c6dac553e38017673b94955c6a11d3d)
 
 ## ✅ Features Implemented
 
